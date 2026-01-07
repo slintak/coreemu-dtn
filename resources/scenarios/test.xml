@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scenario>
+  <networks>
+    <network id="2" name="wlan2" icon="" canvas="1" model="basic_range" type="WIRELESS_LAN">
+      <position x="456.0" y="207.0" lat="47.57728481899551" lon="-122.1261797422066" alt="2.0"/>
+    </network>
+  </networks>
+  <devices>
+    <device id="1" name="n20" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="444.0" y="326.0" lat="47.57620309945033" lon="-122.12634143895774" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="DTND"/>
+      </services>
+    </device>
+    <device id="3" name="n21" icon="" canvas="0" type="PC" class="" image="" compose="" compose_name="">
+      <position x="620.0" y="476.0" lat="47.57483955558084" lon="-122.12396988660767" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="DTND"/>
+      </services>
+    </device>
+    <device id="4" name="n22" icon="" canvas="0" type="PC" class="" image="" compose="" compose_name="">
+      <position x="278.0" y="477.0" lat="47.57483046516923" lon="-122.1285782440152" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="DTND"/>
+      </services>
+    </device>
+  </devices>
+  <links>
+    <link node1="3" node2="2">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:01" ip4="10.0.0.21" ip4_mask="24" ip6="2001::21" ip6_mask="64"/>
+    </link>
+    <link node1="1" node2="2">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:00" ip4="10.0.0.20" ip4_mask="24" ip6="2001::20" ip6_mask="64"/>
+    </link>
+    <link node1="4" node2="2">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:02" ip4="10.0.0.22" ip4_mask="24" ip6="2001::22" ip6_mask="64"/>
+    </link>
+  </links>
+  <mobility_configurations>
+    <mobility_configuration node="2" model="basic_range">
+      <configuration name="range" value="275"/>
+      <configuration name="bandwidth" value="54000000"/>
+      <configuration name="jitter" value="0"/>
+      <configuration name="delay" value="5000"/>
+      <configuration name="error" value="0.0"/>
+      <configuration name="promiscuous" value="0"/>
+    </mobility_configuration>
+  </mobility_configurations>
+  <session_origin lat="47.579166412353516" lon="-122.13232421875" alt="2.0" scale="150.0"/>
+  <session_options>
+    <configuration name="controlnet" value=""/>
+    <configuration name="controlnet0" value=""/>
+    <configuration name="controlnet1" value=""/>
+    <configuration name="controlnet2" value=""/>
+    <configuration name="controlnet3" value=""/>
+    <configuration name="controlnet_updown_script" value=""/>
+    <configuration name="enablerj45" value="1"/>
+    <configuration name="preservedir" value="0"/>
+    <configuration name="enablesdt" value="0"/>
+    <configuration name="sdturl" value="tcp://127.0.0.1:50000/"/>
+    <configuration name="ovs" value="0"/>
+    <configuration name="platform_id_start" value="1"/>
+    <configuration name="nem_id_start" value="1"/>
+    <configuration name="link_enabled" value="1"/>
+    <configuration name="loss_threshold" value="30"/>
+    <configuration name="link_interval" value="1"/>
+    <configuration name="link_timeout" value="4"/>
+    <configuration name="mtu" value="0"/>
+    <configuration name="checksums" value="0"/>
+  </session_options>
+  <session_metadata>
+    <configuration name="shapes" value="[]"/>
+    <configuration name="edges" value="[]"/>
+    <configuration name="hidden" value="[]"/>
+    <configuration name="canvas" value="{&quot;gridlines&quot;: true, &quot;canvases&quot;: [{&quot;id&quot;: 1, &quot;wallpaper&quot;: null, &quot;wallpaper_style&quot;: 1, &quot;fit_image&quot;: false, &quot;dimensions&quot;: [1000, 750]}]}"/>
+  </session_metadata>
+</scenario>
