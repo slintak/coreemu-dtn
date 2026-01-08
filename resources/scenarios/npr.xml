@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scenario>
+  <networks>
+    <network id="1" name="wlan1" icon="" canvas="1" type="WIRELESS">
+      <position x="103.0" y="341.0" lat="47.57606674666119" lon="-122.130936321636" alt="2.0"/>
+      <wireless>
+        <configuration name="movement" value="1"/>
+        <configuration name="max-range" value="400.0"/>
+        <configuration name="bandwidth" value="54000000"/>
+        <configuration name="delay" value="5000"/>
+        <configuration name="jitter" value="0"/>
+        <configuration name="loss-range" value="300.0"/>
+        <configuration name="loss-factor" value="1.0"/>
+        <configuration name="loss" value="0.0"/>
+      </wireless>
+    </network>
+    <network id="2" name="wlan2" icon="" canvas="1" type="WIRELESS">
+      <position x="763.0" y="339.0" lat="47.5760849270536" lon="-122.12204300032325" alt="2.0"/>
+      <wireless>
+        <configuration name="movement" value="1"/>
+        <configuration name="max-range" value="400.0"/>
+        <configuration name="bandwidth" value="54000000"/>
+        <configuration name="delay" value="5000"/>
+        <configuration name="jitter" value="0"/>
+        <configuration name="loss-range" value="300.0"/>
+        <configuration name="loss-factor" value="1.0"/>
+        <configuration name="loss" value="0.0"/>
+      </wireless>
+    </network>
+  </networks>
+  <devices>
+    <device id="3" name="n10" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="295.0" y="347.0" lat="47.57601220544612" lon="-122.12834917361775" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="DTND"/>
+      </services>
+    </device>
+    <device id="4" name="n11" icon="" canvas="0" type="PC" class="" image="" compose="" compose_name="">
+      <position x="178.0" y="133.0" lat="47.57795747366212" lon="-122.12992571694137" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="DTND"/>
+      </services>
+    </device>
+    <device id="5" name="n12" icon="" canvas="0" type="PC" class="" image="" compose="" compose_name="">
+      <position x="182.0" y="562.0" lat="47.57405777441457" lon="-122.12987181802433" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="DTND"/>
+      </services>
+    </device>
+    <device id="6" name="n20" icon="" canvas="0" type="PC" class="" image="" compose="" compose_name="">
+      <position x="585.0" y="343.0" lat="47.576048566262486" lon="-122.12444150213184" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="DTND"/>
+      </services>
+    </device>
+    <device id="7" name="n21" icon="" canvas="0" type="PC" class="" image="" compose="" compose_name="">
+      <position x="737.0" y="139.0" lat="47.577902934416485" lon="-122.12239334328405" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="DTND"/>
+      </services>
+    </device>
+    <device id="8" name="n22" icon="" canvas="0" type="PC" class="" image="" compose="" compose_name="">
+      <position x="735.0" y="555.0" lat="47.574121408201655" lon="-122.12242029274256" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="DTND"/>
+      </services>
+    </device>
+  </devices>
+  <links>
+    <link node1="8" node2="2">
+      <iface1 id="0" name="wlan0" mac="00:00:00:aa:00:05" ip4="10.2.0.22" ip4_mask="24" ip6="2001:db8:2::16" ip6_mask="64"/>
+    </link>
+    <link node1="7" node2="2">
+      <iface1 id="0" name="wlan0" mac="00:00:00:aa:00:04" ip4="10.2.0.21" ip4_mask="24" ip6="2001:db8:2::15" ip6_mask="64"/>
+    </link>
+    <link node1="4" node2="1">
+      <iface1 id="0" name="wlan0" mac="00:00:00:aa:00:01" ip4="10.1.0.21" ip4_mask="24" ip6="2001:db8:1::15" ip6_mask="64"/>
+    </link>
+    <link node1="5" node2="1">
+      <iface1 id="0" name="wlan0" mac="00:00:00:aa:00:02" ip4="10.1.0.22" ip4_mask="24" ip6="2001:db8:1::16" ip6_mask="64"/>
+    </link>
+    <link node1="3" node2="1">
+      <iface1 id="0" name="wlan0" mac="00:00:00:aa:00:00" ip4="10.1.0.20" ip4_mask="24" ip6="2001:db8:1::14" ip6_mask="64"/>
+    </link>
+    <link node1="6" node2="2">
+      <iface1 id="0" name="wlan0" mac="00:00:00:aa:00:03" ip4="10.2.0.20" ip4_mask="24" ip6="2001:db8:2::14" ip6_mask="64"/>
+    </link>
+    <link node1="3" node2="6">
+      <iface1 id="1" name="eth0" mac="00:00:00:aa:00:06" ip4="10.250.0.1" ip4_mask="30" ip6="2001:db8:250::1" ip6_mask="64"/>
+      <iface2 id="1" name="eth0" mac="00:00:00:aa:00:07" ip4="10.250.0.2" ip4_mask="30" ip6="2001:db8:250::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+  </links>
+  <session_origin lat="47.579166412353516" lon="-122.13232421875" alt="2.0" scale="150.0"/>
+  <session_options>
+    <configuration name="controlnet" value=""/>
+    <configuration name="controlnet0" value=""/>
+    <configuration name="controlnet1" value=""/>
+    <configuration name="controlnet2" value=""/>
+    <configuration name="controlnet3" value=""/>
+    <configuration name="controlnet_updown_script" value=""/>
+    <configuration name="enablerj45" value="1"/>
+    <configuration name="preservedir" value="0"/>
+    <configuration name="enablesdt" value="0"/>
+    <configuration name="sdturl" value="tcp://127.0.0.1:50000/"/>
+    <configuration name="ovs" value="0"/>
+    <configuration name="platform_id_start" value="1"/>
+    <configuration name="nem_id_start" value="1"/>
+    <configuration name="link_enabled" value="1"/>
+    <configuration name="loss_threshold" value="30"/>
+    <configuration name="link_interval" value="1"/>
+    <configuration name="link_timeout" value="4"/>
+    <configuration name="mtu" value="0"/>
+    <configuration name="checksums" value="0"/>
+  </session_options>
+  <session_metadata>
+    <configuration name="shapes" value="[]"/>
+    <configuration name="edges" value="[]"/>
+    <configuration name="hidden" value="[]"/>
+    <configuration name="canvas" value="{&quot;gridlines&quot;: true, &quot;canvases&quot;: [{&quot;id&quot;: 1, &quot;wallpaper&quot;: null, &quot;wallpaper_style&quot;: 1, &quot;fit_image&quot;: false, &quot;dimensions&quot;: [1000, 750]}]}"/>
+  </session_metadata>
+</scenario>
